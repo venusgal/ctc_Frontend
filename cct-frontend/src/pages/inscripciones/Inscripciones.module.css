@@ -1,0 +1,119 @@
+.inscripcion {
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.header {
+  background-color: #0d3b66;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.header h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.header p {
+  font-size: 18px;
+}
+
+.formSection {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.form {
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form h2 {
+  color: #0d3b66;
+  margin-top: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo label {
+  font-weight: 600;
+}
+
+.campo input,
+.campo select {
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: #0d3b66;
+}
+
+.button {
+  margin-top: 15px;
+  padding: 14px 25px;
+  background-color: #0d3b66;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.exito {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.exito h1 {
+  color: #0d3b66;
+  margin-bottom: 20px;
+}
+
+.exito p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    padding: 25px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+}

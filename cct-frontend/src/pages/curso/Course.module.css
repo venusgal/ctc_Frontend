@@ -1,0 +1,384 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #2b2d42;
+}
+
+/* HERO SECTION */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.imageWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.heroImage {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.badgeFree {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: #2b9348;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.category {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #eef2f6;
+  color: #0d3b66;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #0d3b66;
+  margin: 0 0 16px 0;
+}
+
+.views {
+  margin-bottom: 24px;
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+.inscribirse, .inscribirseCta {
+  background: #0d3b66;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 12px rgba(13, 59, 102, 0.25);
+}
+
+.inscribirse:hover, .inscribirseCta:hover {
+  background: #144d84;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(13, 59, 102, 0.35);
+}
+
+/* GRID DE INFORMACIÓN */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.infoCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.icon {
+  font-size: 1.8rem;
+  background: #ffffff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.infoCard h3 {
+  margin: 0 0 4px 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.infoCard p {
+  margin: 0;
+  font-weight: 600;
+  color: #0d3b66;
+}
+
+/* SECCIONES Y CONTENIDO */
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  color: #0d3b66;
+  margin-bottom: 16px;
+}
+
+.description {
+  line-height: 1.6;
+  color: #495057;
+  font-size: 1.05rem;
+}
+
+.syllabus {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.syllabus li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.checkIcon {
+  color: #2b9348;
+  font-weight: bold;
+}
+
+/* CALL TO ACTION */
+.cta {
+  background: linear-gradient(135deg, #0d3b66 0%, #1d5b96 100%);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 16px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.cta h2 {
+  color: white;
+  margin-top: 0;
+}
+
+.cta p {
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+/* ESTADOS DE CARGA */
+.stateContainer {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e9ecef;
+  border-top: 4px solid #0d3b66;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .heroImage {
+    height: 260px;
+  }
+
+  .heroContent h1 {
+    font-size: 1.8rem;
+  }
+}
+/* BOTÓN DE INSCRIPCIÓN (OPCIÓN 1 - UIVERSE) */
+.continueApplication {
+  --color: #ffffff;
+  --background: #0D3B66;
+  --background-hover: #144d84;
+  --background-left: #092846;
+  --folder: #F3E9CB;
+  --folder-inner: #BEB393;
+  --paper: #FFFFFF;
+  --paper-lines: #BBC1E1;
+  --paper-behind: #E1E6F9;
+  --pencil-cap: #fff;
+  --pencil-top: #275EFE;
+  --pencil-middle: #fff;
+  --pencil-bottom: #5C86FF;
+  --shadow: rgba(13, 15, 25, 0.2);
+
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  border-radius: 10px;
+  padding: 12px 24px 12px 56px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--color);
+  background: var(--background);
+  box-shadow: 0 4px 14px var(--shadow);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.continueApplication:hover {
+  background: var(--background-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+.continueApplication > div {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 10px 0 0 10px;
+  background: var(--background-left);
+}
+
+.continueApplication > div .folder {
+  width: 20px;
+  height: 14px;
+  position: absolute;
+  left: 14px;
+  top: 15px;
+}
+
+.continueApplication > div .folder .top {
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 14px;
+  border-radius: 2px 2px 0 0;
+  position: absolute;
+  background: var(--folder);
+  transform: skew(-15deg);
+  transform-origin: 0 100%;
+}
+
+.continueApplication > div .folder .top svg {
+  width: 20px;
+  height: 14px;
+  display: block;
+  fill: var(--folder);
+}
+
+.continueApplication > div .folder .paper {
+  width: 14px;
+  height: 16px;
+  left: 3px;
+  bottom: 0;
+  position: absolute;
+  background: var(--paper);
+  border-radius: 2px;
+  transform: translate(0, 0);
+  transition: transform 0.3s ease;
+}
+
+.continueApplication > div .folder .paper:before,
+.continueApplication > div .folder .paper:after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  height: 2px;
+  background: var(--paper-lines);
+  border-radius: 1px;
+}
+
+.continueApplication > div .folder .paper:before {
+  top: 3px;
+}
+
+.continueApplication > div .folder .paper:after {
+  top: 7px;
+}
+
+.continueApplication > div .pencil {
+  height: 2px;
+  width: 14px;
+  border-radius: 1px;
+  background: var(--pencil-cap);
+  position: absolute;
+  top: 21px;
+  left: 17px;
+  transform: rotate(-45deg) translate(0, 0);
+  transition: transform 0.3s ease;
+}
+
+.continueApplication > div .pencil:before,
+.continueApplication > div .pencil:after {
+  content: '';
+  position: absolute;
+  display: block;
+}
+
+.continueApplication > div .pencil:before {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 1px 0 0 1px;
+  background: var(--pencil-middle);
+}
+
+.continueApplication > div .pencil:after {
+  left: 4px;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: var(--pencil-bottom);
+}
+
+/* EFECTO HOVER */
+.continueApplication:hover > div .folder .paper {
+  transform: translate(0, -3px);
+}
+
+.continueApplication:hover > div .pencil {
+  transform: rotate(-45deg) translate(-2px, -2px);
+}

@@ -1,0 +1,231 @@
+/* =========================
+   NAVBAR GENERAL
+========================= */
+.navbar {
+  width: 100%;
+  min-height: 70px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0d3b66;
+  color: white;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1000;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+  flex-shrink: 0;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+}
+
+.logo a:hover {
+  opacity: 0.85;
+}
+
+/* =========================
+   MENÚ Y ENLACES
+========================= */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-shrink: 0;
+}
+
+.link {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+/* =========================
+   DROPDOWN DE CURSOS
+========================= */
+.dropdown {
+  position: relative;
+  padding: 10px 0;
+  display: flex;
+}
+
+.dropdownContent {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  min-width: 220px;
+  background: white;
+  color: #2b2d42;
+  padding: 8px 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.dropdownContent a {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #2b2d42;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+.dropdownContent a:hover {
+  background: #f0f4f8;
+  padding-left: 20px;
+}
+
+.dropdown:hover .dropdownContent,
+.dropdown:focus-within .dropdownContent {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* =========================
+   BUSCADOR Y LUPA
+========================= */.searchForm {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin: 0;
+  width: 38px;
+  transition: width 0.3s ease;
+}
+
+.searchForm:focus-within {
+  width: 220px; 
+}
+
+.searchForm label {
+  display: none;
+}
+
+.input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 38px;
+  box-sizing: border-box;
+  padding: 0 35px 0 12px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.input:focus {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+  cursor: text;
+}
+
+.input::-webkit-search-decoration,
+.input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.caret {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.caret::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 2px;
+  right: -5px;
+  bottom: -3px;
+  background: white;
+  transform: rotate(45deg);
+}
+/* =========================
+   RESULTADOS DE BÚSQUEDA
+========================= */
+.searchResults {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 220px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  padding: 6px 0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  z-index: 2000;
+}
+
+.searchResult {
+  display: block;
+  width: 100%;
+  padding: 11px 15px;
+  background: transparent;
+  border: none;
+  color: #2b2d42;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+.searchResult:hover {
+  background: #f0f4f8;
+  padding-left: 20px;
+}
+
+.noResults {
+  margin: 0;
+  padding: 12px 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* =========================
+   ACCESIBILIDAD Y RESPONSIVE
+========================= */
+@media (prefers-reduced-motion: reduce) {
+  .input,
+  .dropdownContent,
+  .logo a,
+  .link,
+  .dropdownContent a,
+  .searchResult {
+    transition: none;
+  }
+}

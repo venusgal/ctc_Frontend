@@ -1,0 +1,179 @@
+.home {
+  width: 100%;
+}
+
+/* ===== SECCIONES ===== */
+
+.section {
+  padding: 4rem 8%;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  background: linear-gradient(
+      rgba(13, 59, 102, 0.75),
+      rgba(13, 59, 102, 0.75)
+    ),
+    url("/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  min-height: 70vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: white;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.heroContent p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.heroButton {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.heroButton:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.heroButton:active {
+  transform: translateY(-1px);
+}
+
+/* ===== BENEFICIOS ===== */
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  padding: 4rem 8%;
+}
+
+.benefitCard {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+
+  text-align: center;
+
+  box-shadow: 0 4px 16px rgba(0,0,0,.08);
+
+  transition: 0.3s;
+}
+
+.benefitCard:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 3rem !important;
+  color: #0D3B66;
+  margin-bottom: 1rem;
+}
+
+.benefitCard h3 {
+  color: #0D3B66;
+  margin-bottom: .5rem;
+}
+
+/* ===== TITULOS ===== */
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: #0d3b66;
+  margin-bottom: 3rem;
+}
+
+/* ===== CURSOS ===== */
+
+.cursosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 2rem;
+}
+
+/* ===== CATEGORIAS ===== */
+
+.categoriasGrid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 2rem;
+}
+
+/* ===== CTA ===== */
+
+.cta {
+  background: #0d3b66;
+  color: white;
+
+  text-align: center;
+
+  padding: 5rem 8%;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.cta button {
+  background: white;
+  color: #0d3b66;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 1rem 2rem;
+
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ===== MAPA ===== */
+
+.mapSection {
+  padding: 4rem 8%;
+}
+
+.map {
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}

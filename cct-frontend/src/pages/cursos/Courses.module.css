@@ -1,0 +1,196 @@
+.container {
+  min-height: 100vh;
+  background: #f7f9fc;
+}
+.hero {
+  background: #0D3B66;
+  color: white;
+
+  padding: 70px 20px;
+
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 1.2rem;
+
+  max-width: 600px;
+
+  margin: 0 auto 35px;
+}
+.searchContainer {
+  width: 100%;
+  max-width: 650px;
+
+  margin: auto;
+
+  background: white;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 5px 18px;
+
+  box-sizing: border-box;
+}
+.searchContainer span {
+  font-size: 20px;
+}
+.searchContainer input {
+  flex: 1;
+
+  border: none;
+
+  outline: none;
+
+  padding: 15px 5px;
+
+  font-size: 16px;
+}
+.filters {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 45px 20px 20px;
+}
+.filters h2 {
+  color: #0D3B66;
+
+  margin-bottom: 20px;
+}
+.categoryButtons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+.categoryButtons button {
+  background: white;
+
+  border: 1px solid #d6dce5;
+
+  color: #0D3B66;
+
+  padding: 10px 20px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: 0.25s;
+}
+.categoryButtons button:hover {
+  background: #eaf1f8;
+}
+.categoryButtons .active {
+  background: #0D3B66;
+
+  color: white;
+
+  border-color: #0D3B66;
+}
+.coursesSection {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 30px 20px 70px;
+}
+.resultsHeader {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+.resultsHeader h2 {
+  color: #0D3B66;
+
+  margin: 0;
+}
+.resultsHeader span {
+  color: #666;
+
+  font-size: 15px;
+}
+.coursesGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 30px;
+}
+@media (max-width: 900px) {
+
+  .coursesGrid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+@media (max-width: 600px) {
+
+  .coursesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .resultsHeader {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+
+}
+.empty {
+  background: white;
+
+  padding: 60px 20px;
+
+  border-radius: 15px;
+
+  text-align: center;
+}
+.empty h3 {
+  color: #0D3B66;
+
+  font-size: 24px;
+}
+.empty p {
+  color: #666;
+
+  margin-bottom: 25px;
+}
+.empty button {
+  background: #0D3B66;
+
+  color: white;
+
+  border: none;
+
+  padding: 12px 25px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
